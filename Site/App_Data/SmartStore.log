@@ -1,0 +1,2 @@
+﻿SmartStore Error: 2 : ERROR: Error while calling TaskScheduler endpoint 'http://manfello.net/TaskScheduler/Sweep'. HTTP 404, Not Found
+    DateTime=2016-11-18T12:48:01.9298358Z
