@@ -1,0 +1,4 @@
+[submodule "Src/SmartStoreNet"]
+	path = Src/SmartStoreNet
+	url = https://github.com/smartstoreag/SmartStoreNET.git
+	branch = master

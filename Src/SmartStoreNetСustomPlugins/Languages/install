@@ -1,0 +1,11 @@
+- Go to the backend of the shop
+
+- Go to Configuration -> Regional Settings -> Languages
+
+- Click "Add New" to add a new language
+
+- Enter the properties for the new language and press "Save" to save the new language
+
+- Back on the languages list, click on the language name to open the language properties page
+
+- Click on "Import Resources" and select the downloaded xml-file
