@@ -15,6 +15,14 @@
                     {
                         <a href="@Model.FacebookLink" target="_blank"><i class="fa fa-facebook-square fa-4x"></i></a>
                     }
+                    @if (!String.IsNullOrEmpty(Model.VKLink))
+                    {
+                        <a href="@Model.VKLink" target="_blank"><i class="fa fa-vk-square fa-4x"></i></a>
+                    }
+                    @if (!String.IsNullOrEmpty(Model.InstagramLink))
+                    {
+                        <a href="@Model.InstagramLink" target="_blank"><i class="fa fa-instagram-square fa-4x"></i></a>
+                    }
                     @if (!String.IsNullOrEmpty(Model.GooglePlusLink))
                     {
                         <a href="@Model.GooglePlusLink" target="_blank"><i class="fa fa-google-plus-square fa-4x"></i></a>

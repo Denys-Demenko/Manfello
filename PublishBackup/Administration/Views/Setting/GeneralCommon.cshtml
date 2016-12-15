@@ -856,6 +856,24 @@
         </tr>
         <tr class="social-link">
             <td class="adminTitle">
+                @Html.SmartLabelFor(model => model.SocialSettings.VKLink)
+            </td>
+            <td class="adminData">
+                @Html.SettingEditorFor(model => model.SocialSettings.VKLink)
+                @Html.ValidationMessageFor(model => model.SocialSettings.VKLink)
+            </td>
+        </tr>
+        <tr class="social-link">
+            <td class="adminTitle">
+                @Html.SmartLabelFor(model => model.SocialSettings.InstagramLink)
+            </td>
+            <td class="adminData">
+                @Html.SettingEditorFor(model => model.SocialSettings.InstagramLink)
+                @Html.ValidationMessageFor(model => model.SocialSettings.InstagramLink)
+            </td>
+        </tr>
+        <tr class="social-link">
+            <td class="adminTitle">
                 @Html.SmartLabelFor(model => model.SocialSettings.GooglePlusLink)
             </td>
             <td class="adminData">

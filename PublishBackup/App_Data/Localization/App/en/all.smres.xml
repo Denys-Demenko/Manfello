@@ -6310,6 +6310,18 @@
 	<LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.FacebookLink.Hint">
 		<Value>Leave this field blank if facebook should not be displayed.</Value>
 	</LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.VKLink">
+		<Value>VK link</Value>
+	</LocaleResource>
+	<LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.VKLink.Hint">
+		<Value>Leave this field blank if VK should not be displayed.</Value>
+	</LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.InstagramLink">
+    <Value>Instagram link</Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.InstagramLink.Hint">
+    <Value>Leave this field blank if instagram should not be displayed.</Value>
+  </LocaleResource>
 	<LocaleResource Name="Admin.Configuration.Settings.GeneralCommon.SocialSettings.GooglePlusLink">
 		<Value>Google Plus link</Value>
 	</LocaleResource>

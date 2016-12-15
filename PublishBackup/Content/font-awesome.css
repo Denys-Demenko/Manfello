@@ -560,6 +560,12 @@
 .fa-facebook-square:before {
   content: "\f082";
 }
+.fa-vk-square:before {
+  content: "\f296";
+}
+.fa-instagram-square:before {
+  content: "\f16d";
+}
 .fa-camera-retro:before {
   content: "\f083";
 }
