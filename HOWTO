@@ -1,0 +1,73 @@
+To make installation runs again:
+======================
+- remove Settings.txt from App_Data folder
+
+Add new vector icon:
+======================
+Add it to font (d:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Content\fonts\)
+Use https://icomoon.io/app to import current .svg font
+"Edit" last icon in the bundle then click "duplicate"
+Then click "Replace" and add new SVG to it (to generate SVG from raster - http://picsvg.com/)
+Add new class to D:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Content\font-awesome.css
+Then regenerate D:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Content\font-awesome.min.css with https://cssminifier.com/
+
+Update header:
+======================
+D:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Views\Shared\Header.cshtml
+D:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Views\Shared\Header.Mobile.cshtml
+
+Force mobile version
+======================
+Go to D:\Manfello\Src\SmartStoreNet\src\Libraries\SmartStore.Services\Common\MobileDeviceHelper.cs
+add to constructor:
+_themeSettings.EmulateMobileDevice = true;
+
+rewrite:
+public virtual bool CustomerDontUseMobileVersion()
+        {
+            return false;
+        }
+
+Change contacts and phones info in the header
+======================
+look at <Update header> and CommonController actions: Phones, Contacts
+
+Generate "Features/advantages" list on the main page
+======================
+look at content/scripts/Features_topic.sql script. Just run - nothing to setup
+
+Add icon to WYISWIG editor:
+=======================
+d:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Content\editors\ckeditor\plugins\fontawesome\font-awesome\fonts\
+
+Disable RIGHT column area
+=======================
+D:\Manfello\Src\SmartStoreNet\src\Presentation\SmartStore.Web\Views\Shared\_ColumnsThree.cshtml
+replace:
+string[] spanWidths = GetThemeVariable<string>("GridSettings", "5/14/5").Split('/');
+with
+string[] spanWidths = "5/18/5".Split('/');
+
+comment this:
+<div id="content-right" class="span@(spanWidths[2])">
+    @if (IsSectionDefined("right_top"))
+    {
+        @RenderSection("right_top", false)
+    }
+
+    @if (IsSectionDefined("right"))
+    {
+        @RenderSection("right")
+    }
+    else
+    {
+        @Html.Widget("right_side_column_before")
+
+        @Html.Action("RecentlyViewedProductsBlock", "Catalog", new { area = "" })
+        @Html.Widget("right_side_column_after_recentlyviewed")
+        @Html.Action("PollBlock", "Poll", new { systemKeyword = "RightColumnPoll", area = "" })
+        @Html.Widget("right_side_column_after_poll")
+
+        @Html.Widget("right_side_column_after")
+    }
+</div>
