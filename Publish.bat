@@ -30,7 +30,7 @@ msbuild SmartStoreNET.proj /p:DebugSymbols=false /p:DebugType=None /P:SlnName=Sm
 
 rmdir ..\..\Publish /s /q
 mkdir ..\..\Publish
-xcopy /Y /E build\Web ..\..\Publish
+xcopy /Y build\SmartStoreNET*.zip ..\..\Publish
 rmdir build /s /q
 
 pause

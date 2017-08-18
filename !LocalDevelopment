@@ -1,0 +1,9 @@
+UPDATE Setting SET [Value] = 'False' WHERE [Name] = 'securitysettings.forcesslforallpages'
+UPDATE Store   SET [SslEnabled = 0] WHERE [Name] = 'Manfello'
+
+Copy Settings.Local.txt file to App_Data\Settings.txt
+AppVersion: 2.6.0.0
+DataProvider: sqlserver
+DataConnectionString: Data Source=.\SQL2014;Initial Catalog=Manfello;Integrated Security=True;Persist Security Info=False;Enlist=False;Pooling=True;Min Pool Size=1;Max Pool Size=100;Connect Timeout=15;User Instance=False
+
+Copy Media\Thumbs folder to corresponing folder
